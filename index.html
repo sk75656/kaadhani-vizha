@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
         }
+        
         body {
             font-family: 'Mukta Malar', sans-serif;
             background-color: #1a0205;
@@ -20,24 +21,26 @@
             overflow-x: hidden;
             text-align: center;
         }
+
         h1, h2, h3, h4, .tamil-font {
             font-family: 'Kavivanar', cursive;
         }
-        
-        /* Grand Textured Festive Background with Ghibli Style Lighting Base */
+
+        /* Video-Style Multi-Layered Cinematic Canvas */
         .invitation-container {
             background: 
-                radial-gradient(circle at 50% 10%, rgba(255, 165, 0, 0.15), transparent 60%),
-                linear-gradient(to bottom, #360207 0%, #4a050d 15%, #6e0915 40%, #8a0c1b 65%, #4a050d 85%, #1a0205 100%);
+                radial-gradient(circle at 50% 20%, rgba(255, 107, 107, 0.25), transparent 50%),
+                radial-gradient(circle at 50% 70%, rgba(212, 175, 55, 0.15), transparent 60%),
+                linear-gradient(to bottom, #2b0307 0%, #4a050d 20%, #6e0915 45%, #8a0c1b 70%, #4a050d 90%, #170103 100%);
             position: relative;
             min-height: 100vh;
             width: 100%;
-            padding-bottom: 60px;
-            box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+            padding-bottom: 80px;
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.9);
         }
 
-        /* Ambient Dynamic Marigold and Gold Confetti Rain Layer */
-        .ambient-layer {
+        /* Ghibli-Inspired Sunbeams & Floating Petals Layer */
+        .cinematic-overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -45,393 +48,337 @@
             height: 100%;
             pointer-events: none;
             z-index: 10;
+            background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 40%, rgba(255,215,0,0.02) 70%, transparent 100%);
         }
+
         .flower-petal {
             position: absolute;
-            background: #ff9f00;
+            background: linear-gradient(135deg, #ff9f00, #ff5722);
             border-radius: 50% 0 50% 50%;
-            opacity: 0.85;
-            filter: drop-shadow(0 2px 4px rgba(255,69,0,0.3));
-            animation: ghibliFall linear infinite;
+            opacity: 0.9;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+            animation: cinematicFall linear infinite;
         }
-        @keyframes ghibliFall {
+
+        @keyframes cinematicFall {
             0% {
-                transform: translateY(-40px) rotate(0deg) translateX(0) scale(0.8);
+                transform: translateY(-50px) rotate(0deg) translateX(0) scale(0.6);
                 opacity: 0;
             }
-            10% { opacity: 1; }
-            90% { opacity: 0.9; }
+            15% { opacity: 1; filter: brightness(1.2); }
+            90% { opacity: 0.8; }
             100% {
-                transform: translateY(105vh) rotate(1080deg) translateX(150px) scale(1.1);
+                transform: translateY(105vh) rotate(720deg) translateX(120px) scale(1);
                 opacity: 0;
             }
         }
 
-        /* Intricate Double Mango Leaves & Marigold Hanging Garlands */
-        .grand-garland {
+        /* Top Floral Festoons & Hanging Garlands */
+        .royal-garland {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 90px;
-            background: repeat-x url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" width="100" height="50"><path d="M0,5 Q25,30 50,5 Q75,30 100,5" fill="none" stroke="%23ff8c00" stroke-width="3" stroke-dasharray="1,3"/><path d="M0,0 Q25,25 50,0 Q75,25 100,0 M25,15 Q25,45 12,50 Q25,45 25,15 M75,15 Q75,45 62,50 Q75,45 75,15" fill="%231E5631" stroke="%23143F24" stroke-width="1.5"/><circle cx="25" cy="15" r="5" fill="%23ff4500"/><circle cx="75" cy="15" r="5" fill="%23ff4500"/><circle cx="50" cy="5" r="6" fill="%23ffd700"/><circle cx="0" cy="0" r="4" fill="%23ffd700"/><circle cx="100" cy="0" r="4" fill="%23ffd700"/></svg>');
+            height: 100px;
+            background: repeat-x url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" width="100" height="50"><path d="M0,5 Q25,35 50,5 Q75,35 100,5" fill="none" stroke="%23ff9f00" stroke-width="4"/><path d="M0,0 Q25,20 50,0 Q75,20 100,0" fill="none" stroke="%23d4af37" stroke-width="2"/><circle cx="25" cy="18" r="6" fill="%23d4af37"/><circle cx="75" cy="18" r="6" fill="%23d4af37"/><circle cx="50" cy="5" r="7" fill="%23ff4500"/><path d="M25,18 L25,38 M75,18 L75,38" stroke="%23ff4500" stroke-width="2" stroke-linecap="round" stroke-dasharray="1,3"/></svg>');
             z-index: 6;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
         }
 
-        /* Layout Structure */
         section {
-            padding: 50px 20px;
+            padding: 60px 20px;
             position: relative;
             z-index: 2;
-            max-width: 750px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Multi-layered Detailed Temple Gopuram with Soft Glow Effects */
-        .temple-gopuram-section {
-            padding-top: 120px;
+        /* Grand Temple Gateway (Inspired by Video Opening) */
+        .temple-gate-wrapper {
+            padding-top: 140px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .detailed-gopuram {
-            width: 280px;
+
+        .temple-gate-svg {
+            width: 320px;
             height: auto;
-            filter: drop-shadow(0 0 25px rgba(255, 190, 11, 0.45));
-            animation: warmGlow 4s ease-in-out infinite alternate;
-        }
-        @keyframes warmGlow {
-            0% { filter: drop-shadow(0 0 15px rgba(255, 175, 0, 0.4)); }
-            100% { filter: drop-shadow(0 0 35px rgba(255, 215, 0, 0.8)); }
+            filter: drop-shadow(0 0 30px rgba(255, 123, 0, 0.4));
+            animation: gatewayGlow 4s ease-in-out infinite alternate;
         }
 
-        /* Divine Traditional Lamps (Kuthu Vilakku) with Animated Flaring Flames */
-        .kuthu-vilakku-row {
-            display: flex;
-            justify-content: space-between;
-            width: 85%;
-            margin: -40px auto 20px auto;
-        }
-        .kuthu-vilakku {
-            width: 70px;
-            height: auto;
-            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
-        }
-        .flame-glow {
-            animation: flameFlicker 0.2s infinite alternate;
-            transform-origin: center bottom;
-        }
-        @keyframes flameFlicker {
-            0% { transform: scale(0.92) rotate(-1deg); opacity: 0.85; }
-            100% { transform: scale(1.08) rotate(2deg); opacity: 1; filter: drop-shadow(0 0 8px #ff4500); }
+        @keyframes gatewayGlow {
+            0% { filter: drop-shadow(0 0 20px rgba(255, 123, 0, 0.3)); }
+            100% { filter: drop-shadow(0 0 45px rgba(255, 215, 0, 0.7)); }
         }
 
-        /* Typography & Artistic Borders */
-        .welcome-badge {
+        /* Grand Invitation Banner */
+        .invitation-badge {
             color: #ffd700;
-            font-size: 1.4rem;
-            letter-spacing: 3px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-            background: rgba(0, 0, 0, 0.3);
-            padding: 8px 25px;
-            border-radius: 50px;
+            font-size: 1.3rem;
+            letter-spacing: 4px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.2), transparent);
+            padding: 10px 40px;
             display: inline-block;
-            border: 1px solid rgba(255,215,0,0.3);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            border-top: 1px solid rgba(255,215,0,0.3);
+            border-bottom: 1px solid rgba(255,215,0,0.3);
         }
-        .grand-title-box {
-            position: relative;
-            padding: 10px;
-            margin: 15px 0;
-        }
+
         .function-title {
             color: #ffffff;
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: bold;
-            text-shadow: 0 0 15px #ff7b00, 0 0 30px #ff2a00, 0 4px 10px rgba(0,0,0,0.8);
-            letter-spacing: 1px;
-            animation: gentlePulse 3s infinite ease-in-out;
-        }
-        @keyframes gentlePulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-        }
-        .subtitle-eng {
-            font-size: 1.4rem;
-            color: #ffbc42;
-            letter-spacing: 4px;
-            font-weight: 600;
-            margin-top: -5px;
+            text-shadow: 0 0 20px #ff5722, 0 0 40px #ff2a00, 0 6px 15px rgba(0,0,0,0.9);
+            letter-spacing: 2px;
+            animation: scalePulse 4s infinite ease-in-out;
         }
 
-        /* Name Presentation Section */
-        .name-card {
-            background: rgba(26, 2, 5, 0.6);
-            border-radius: 20px;
-            padding: 25px;
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin: 20px auto;
-            max-width: 90%;
+        @keyframes scalePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
         }
-        .label-selvi {
-            font-size: 2.2rem;
+
+        .subtitle-eng {
+            font-size: 1.5rem;
             color: #ffbc42;
-            font-weight: bold;
+            letter-spacing: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 5px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-            margin-bottom: 5px;
         }
-        .child-name {
-            color: #ffd700;
-            font-size: 3.4rem;
-            text-shadow: 0 0 10px rgba(255,215,0,0.4), 0 4px 8px rgba(0,0,0,0.6);
-            font-weight: bold;
-            display: inline-block;
+
+        /* Name Card Layout */
+        .name-card {
+            background: linear-gradient(135deg, rgba(43, 4, 8, 0.8), rgba(110, 9, 21, 0.4));
+            border-radius: 25px;
+            padding: 35px 20px;
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6), inset 0 0 15px rgba(255,215,0,0.1);
+            margin: 30px auto;
+            max-width: 90%;
             position: relative;
         }
 
-        /* Elaborate Native Musical Instruments Area */
-        .orchestra-canopy {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            padding: 20px;
-            border-top: 2px solid #ffd700;
-            border-bottom: 2px solid #ffd700;
+        .label-selvi {
+            font-size: 2.5rem;
+            color: #ffbc42;
+            font-weight: bold;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+            margin-bottom: 5px;
+        }
+
+        .child-name {
+            color: #ffd700;
+            font-size: 3.8rem;
+            text-shadow: 0 0 15px rgba(255,215,0,0.5), 0 6px 12px rgba(0,0,0,0.7);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* High-Detail Musical Canopy & Traditional Dancers */
+        .music-dance-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 30px 20px;
+            border-left: 3px solid #ffd700;
+            border-right: 3px solid #ffd700;
             margin: 40px 15px;
+            position: relative;
         }
-        .orchestra-title {
+
+        .section-accent-title {
             color: #ff9f00;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
-        .instruments-container {
+
+        .assets-flex-row {
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
         }
-        .instrument-wrapper {
+
+        .asset-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        .instrument-art {
-            width: 130px;
-            height: auto;
-            filter: drop-shadow(0 8px 12px rgba(0,0,0,0.6));
-        }
-        .nadaswaram-motion {
-            animation: nadaswaramWave 4s ease-in-out infinite alternate;
-            transform-origin: left center;
-        }
-        .thavil-motion {
-            animation: thavilBeat 0.6s linear infinite alternate;
-        }
-        @keyframes nadaswaramWave {
-            0% { transform: rotate(-8deg) translateY(0); }
-            100% { transform: rotate(12deg) translateY(-10px); }
-        }
-        @keyframes thavilBeat {
-            0% { transform: scale(0.97) translateY(0); }
-            100% { transform: scale(1.03) translateY(-4px); }
-        }
-        .instrument-label {
-            font-size: 0.95rem;
-            color: #ffd700;
-            margin-top: 8px;
-            opacity: 0.9;
-        }
-
-        /* Majestic Royal Festival Elephant Section */
-        .festival-procession {
-            margin: 40px 0;
             position: relative;
         }
-        .majestic-elephant {
-            width: 220px;
+
+        .instrument-svg {
+            width: 140px;
             height: auto;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.7));
-            animation: majesticWalk 6s ease-in-out infinite alternate;
-        }
-        @keyframes majesticWalk {
-            0% { transform: translateX(-15px) rotate(-1.5deg); }
-            100% { transform: translateX(15px) rotate(2.5deg); }
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.6));
         }
 
-        /* Grand Luxury Details Layout Box */
-        .luxury-details-board {
-            background: linear-gradient(135deg, rgba(74, 5, 13, 0.95) 0%, rgba(43, 4, 8, 0.95) 100%);
-            border: 3px double #ffd700;
+        .nadaswaram-anim {
+            animation: nadaswaramSway 5s ease-in-out infinite alternate;
+            transform-origin: top left;
+        }
+
+        .thavil-anim {
+            animation: thavilBounce 0.8s ease-in-out infinite alternate;
+        }
+
+        @keyframes nadaswaramSway {
+            0% { transform: rotate(-5deg) translateY(0); }
+            100% { transform: rotate(10deg) translateY(-8px); }
+        }
+
+        @keyframes thavilBounce {
+            0% { transform: translateY(0) scale(0.98); }
+            100% { transform: translateY(-6px) scale(1.02); }
+        }
+
+        /* Classical Dancer Silhouette Art (Matching Video Theme) */
+        .dancer-svg {
+            width: 95px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(255,140,0,0.4));
+        }
+
+        .dancer-left {
+            animation: dancerSwayLeft 3s ease-in-out infinite alternate;
+        }
+
+        .dancer-right {
+            animation: dancerSwayRight 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes dancerSwayLeft {
+            0% { transform: scaleX(1) rotate(-3deg); }
+            100% { transform: scaleX(1) rotate(3deg) translateY(-4px); }
+        }
+
+        @keyframes dancerSwayRight {
+            0% { transform: scaleX(-1) rotate(-3deg); }
+            100% { transform: scaleX(-1) rotate(3deg) translateY(-4px); }
+        }
+
+        /* Premium Event Details Board */
+        .premium-details-board {
+            background: linear-gradient(135deg, rgba(74, 5, 13, 0.95) 0%, rgba(26, 2, 5, 0.98) 100%);
+            border: 2px solid #ffd700;
             border-radius: 20px;
-            padding: 40px 25px;
-            margin: 40px 15px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.7), inset 0 0 20px rgba(255,215,0,0.2);
+            padding: 45px 25px;
+            margin: 45px 15px;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.8), inset 0 0 30px rgba(212,175,55,0.15);
+        }
+
+        .detail-block {
+            margin-bottom: 35px;
             position: relative;
         }
-        .luxury-details-board::before {
-            content: '';
-            position: absolute;
-            top: 10px; left: 10px; right: 10px; bottom: 10px;
-            border: 1px solid rgba(255,215,0,0.15);
-            border-radius: 14px;
-            pointer-events: none;
-        }
-        .event-card-item {
-            margin-bottom: 30px;
-        }
-        .event-card-item:last-child {
+
+        .detail-block:last-child {
             margin-bottom: 0;
         }
-        .badge-icon {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-            display: inline-block;
-            filter: drop-shadow(0 0 5px #ffd700);
-        }
-        .card-heading {
+
+        .block-label {
             color: #ff9f00;
             font-weight: 700;
             display: block;
-            margin-bottom: 6px;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-        }
-        .card-body-text {
-            font-size: 1.8rem;
-            color: #ffffff;
-            font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
         }
 
-        /* Highly Attractive Animated Pulsing Map Navigation Button */
-        .grand-navigation-button {
+        .block-value {
+            font-size: 2rem;
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* High-Attraction Video-Style Action Button */
+        .map-action-button {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            background: linear-gradient(45deg, #cc2b02, #ff8c00, #ffd700);
+            background: linear-gradient(45deg, #d4af37, #ff8c00, #d4af37);
             background-size: 200% auto;
             color: #1a0205;
             font-weight: 800;
             font-size: 1.3rem;
-            padding: 18px 45px;
+            padding: 20px 50px;
             border-radius: 50px;
             text-decoration: none;
-            box-shadow: 0 8px 25px rgba(255, 69, 0, 0.5), 0 0 0 0px rgba(255,215,0,0.4);
-            transition: all 0.4s ease;
-            margin-top: 25px;
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 15px;
             border: 2px solid #ffffff;
-            animation: fluidShimmer 3s infinite, dynamicPulse 2s infinite;
-        }
-        @keyframes fluidShimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        @keyframes dynamicPulse {
-            0% { box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4), 0 0 0 0px rgba(255,215,0,0.4); }
-            70% { box-shadow: 0 12px 35px rgba(255, 69, 0, 0.7), 0 0 0 15px rgba(255,215,0,0); }
-            100% { box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4), 0 0 0 0px rgba(255,215,0,0); }
-        }
-        .grand-navigation-button:hover {
-            transform: translateY(-4px) scale(1.03);
-            filter: brightness(1.1);
+            animation: shimmerEffect 4s linear infinite, glowPulse 2s infinite;
         }
 
-        /* Multi-layered Ghibli Traditional Silhouette Crowd Border at the bottom */
-        .celebration-crowd-base {
+        @keyframes shimmerEffect {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        @keyframes glowPulse {
+            0% { box-shadow: 0 10px 25px rgba(255, 140, 0, 0.4), 0 0 0 0px rgba(255,215,0,0.3); }
+            70% { box-shadow: 0 15px 35px rgba(255, 140, 0, 0.6), 0 0 0 15px rgba(255,215,0,0); }
+            100% { box-shadow: 0 10px 25px rgba(255, 140, 0, 0.4), 0 0 0 0px rgba(255,215,0,0); }
+        }
+
+        .map-action-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(255, 140, 0, 0.7);
+        }
+
+        /* Multi-Layer Silhouette Celebration Backdrop at the Bottom */
+        .festival-crowd-footer {
             width: 100%;
-            height: 140px;
+            height: 150px;
             position: relative;
             background: 
-                repeat-x bottom url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 50" width="120" height="50"><path d="M5,50 L5,28 Q10,14 15,26 L17,50 M10,14 A5,5 0 1,1 10,4 A5,5 0 1,1 10,14 M30,50 L30,22 Q37,8 44,24 L45,50 M37,8 A5,5 0 1,1 37,0 A5,5 0 1,1 37,8 M75,50 L75,26 Q82,12 88,28 L90,50 M82,12 A5,5 0 1,1 82,2 A5,5 0 1,1 82,12" fill="%23260307" opacity="0.95"/></svg>'),
-                repeat-x bottom url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 50" width="120" height="50"><path d="M15,50 L15,32 Q22,18 28,34 L30,50 M22,18 A4.5,4.5 0 1,1 22,9 A4.5,4.5 0 1,1 22,18 M55,50 L55,25 Q62,10 68,26 L70,50 M62,10 A4.5,4.5 0 1,1 62,1 A4.5,4.5 0 1,1 62,10 M95,50 L95,30 Q102,16 108,32 L110,50 M102,16 A4.5,4.5 0 1,1 102,7 A4.5,4.5 0 1,1 102,16" fill="%23140103" opacity="1"/> </svg>');
-            margin-top: 50px;
-        }
-
-        /* Subtle Audio Wave Aesthetic Indicator */
-        .sound-wave-indicator {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 4px;
-            height: 30px;
-            margin: 20px 0;
-        }
-        .wave-bar {
-            width: 4px;
-            background-color: #ffd700;
-            border-radius: 2px;
-            animation: soundActive 0.5s ease-in-out infinite alternate;
-        }
-        .wave-bar:nth-child(2) { animation-delay: 0.1s; height: 15px; }
-        .wave-bar:nth-child(3) { animation-delay: 0.25s; height: 25px; }
-        .wave-bar:nth-child(4) { animation-delay: 0.05s; height: 10px; }
-        .wave-bar:nth-child(5) { animation-delay: 0.18s; height: 20px; }
-        @keyframes soundActive {
-            0% { transform: scaleY(0.3); opacity: 0.6; }
-            100% { transform: scaleY(1.1); opacity: 1; }
+                repeat-x bottom url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 50" width="120" height="50"><path d="M5,50 L5,25 Q12,10 18,25 L20,50 M35,50 L35,20 Q42,5 49,22 L50,50 M80,50 L80,23 Q87,8 94,25 L95,50" fill="%23240205" opacity="0.95"/></svg>'),
+                repeat-x bottom url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 50" width="120" height="50"><path d="M15,50 L15,28 Q22,12 29,28 L30,50 M60,50 L60,24 Q67,10 74,25 L75,50 M100,50 L100,27 Q107,13 114,27 L115,50" fill="%23120002" opacity="1"/></svg>');
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <div class="ambient-layer" id="ambientParticleBox"></div>
-    <div class="grand-garland"></div>
+    <div class="cinematic-overlay" id="petalCanvas"></div>
+    <div class="royal-garland"></div>
 
     <div class="invitation-container">
         
-        <section class="temple-gopuram-section">
-            <svg class="detailed-gopuram" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5,150 L115,150 L105,130 L15,130 Z" fill="#4a0d16" stroke="#ffd700" stroke-width="2"/>
-                <rect x="35" y="130" width="50" height="20" fill="#2b0408" stroke="#ffd700" stroke-width="1.5"/>
-                <line x1="45" y1="150" x2="45" y2="130" stroke="#ffd700" stroke-width="1.5"/>
-                <line x1="75" y1="150" x2="75" y2="130" stroke="#ffd700" stroke-width="1.5"/>
+        <section class="temple-gate-wrapper">
+            <svg class="temple-gate-svg" viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="60" width="15" height="90" fill="#3d070e" stroke="#d4af37" stroke-width="1.5"/>
+                <rect x="115" y="60" width="15" height="90" fill="#3d070e" stroke="#d4af37" stroke-width="1.5"/>
+                <rect x="35" y="75" width="10" height="75" fill="#520b15" stroke="#d4af37" stroke-width="1"/>
+                <rect x="95" y="75" width="10" height="75" fill="#520b15" stroke="#d4af37" stroke-width="1"/>
                 
-                <path d="M15,130 L105,130 L95,105 L25,105 Z" fill="#5e101c" stroke="#ffd700" stroke-width="1.8"/>
-                <path d="M25,105 L95,105 L87,82 L33,82 Z" fill="#781423" stroke="#ffd700" stroke-width="1.8"/>
-                <path d="M33,82 L87,82 L80,61 L40,61 Z" fill="#91192b" stroke="#ffd700" stroke-width="1.8"/>
-                <path d="M40,61 L80,61 L73,42 L47,42 Z" fill="#a81e33" stroke="#ffd700" stroke-width="1.8"/>
-                <path d="M47,42 L73,42 L68,22 L52,22 Z" fill="#c2233b" stroke="#ffd700" stroke-width="2"/>
+                <path d="M5,60 Q70,10 135,60 L120,75 Q70,30 20,75 Z" fill="#b8860b" stroke="#ffd700" stroke-width="2"/>
+                <path d="M20,45 Q70,-5 120,45 L110,55 Q70,15 30,55 Z" fill="#996515" stroke="#ffd700" stroke-width="1.5"/>
                 
-                <path d="M60,6 L60,22" stroke="#ffd700" stroke-width="3.5" stroke-linecap="round"/>
-                <circle cx="60" cy="7" r="4.5" fill="#ffbc42" stroke="#ffd700" stroke-width="1"/>
+                <path d="M70,2 L70,15" stroke="#ffd700" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="70" cy="3" r="4" fill="#ffbc42"/>
                 
-                <path d="M48,10 L48,22" stroke="#ffd700" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="48" cy="11" r="3.5" fill="#ffbc42" stroke="#ffd700" stroke-width="1"/>
+                <path d="M52,12 L52,22" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="52" cy="12" r="3" fill="#ffbc42"/>
                 
-                <path d="M72,10 L72,22" stroke="#ffd700" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="72" cy="11" r="3.5" fill="#ffbc42" stroke="#ffd700" stroke-width="1"/>
+                <path d="M88,12 L88,22" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="88" cy="12" r="3" fill="#ffbc42"/>
                 
-                <path d="M20,117 L100,117 M30,93 L90,93 M38,71 L82,71 M44,51 L76,51" stroke="#ffd700" stroke-width="1" stroke-dasharray="2,2"/>
+                <circle cx="70" cy="45" r="3" fill="#ffd700"/>
+                <path d="M68,45 L72,45 L74,53 L66,53 Z" fill="#ffd700"/>
             </svg>
 
-            <div class="kuthu-vilakku-row">
-                <svg class="kuthu-vilakku" viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="20" cy="92" rx="18" ry="6" fill="#b8860b" stroke="#ffd700" stroke-width="1"/>
-                    <rect x="17" y="55" width="6" height="37" fill="#d4af37"/>
-                    <ellipse cx="20" cy="55" rx="10" ry="3.5" fill="#b8860b" stroke="#ffd700" stroke-width="1"/>
-                    <rect x="18" y="22" width="4" height="33" fill="#d4af37"/>
-                    <ellipse cx="20" cy="22" rx="15" ry="5" fill="#b8860b" stroke="#ffd700" stroke-width="1.5"/>
-                    <path class="flame-glow" d="M20,2 Q16,14 20,22 Q24,14 20,2 Z" fill="#ff4500" filter="drop-shadow(0 0 4px #ffbc42)"/>
-                </svg>
-
-                <svg class="kuthu-vilakku" viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="20" cy="92" rx="18" ry="6" fill="#b8860b" stroke="#ffd700" stroke-width="1"/>
-                    <rect x="17" y="55" width="6" height="37" fill="#d4af37"/>
-                    <ellipse cx="20" cy="55" rx="10" ry="3.5" fill="#b8860b" stroke="#ffd700" stroke-width="1"/>
-                    <rect x="18" y="22" width="4" height="33" fill="#d4af37"/>
-                    <ellipse cx="20" cy="22" rx="15" ry="5" fill="#b8860b" stroke="#ffd700" stroke-width="1.5"/>
-                    <path class="flame-glow" d="M20,2 Q16,14 20,22 Q24,14 20,2 Z" fill="#ff4500" filter="drop-shadow(0 0 4px #ffbc42)"/>
-                </svg>
-            </div>
-
-            <div class="grand-title-box">
-                <span class="welcome-badge">|| மங்களகரமான அழைப்பு ||</span>
+            <div style="margin-top: 30px;">
+                <span class="invitation-badge">|| மிக மகிழ்வுடன் அழைக்கும் ||</span>
                 <h1 class="function-title">காதணி விழா</h1>
-                <p class="subtitle-eng">EAR PIERCING CEREMONY</p>
+                <p class="subtitle-eng">Ear Piercing Ceremony</p>
             </div>
         </section>
 
@@ -442,119 +389,100 @@
             </div>
         </section>
 
-        <section class="orchestra-canopy">
-            <h3 class="orchestra-title">மங்கள இசை முழங்க...</h3>
+        <section class="music-dance-section">
+            <h3 class="section-accent-title">மங்கள இசை & பரதநாட்டிய முழக்கங்கள்</h3>
             
-            <div class="sound-wave-indicator">
-                <div class="wave-bar" style="height:28px;"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar" style="height:22px;"></div>
-            </div>
-
-            <div class="instruments-container">
-                <div class="instrument-wrapper">
-                    <svg class="instrument-art nadaswaram-motion" viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10,22 L100,16 L100,28 Z" fill="#5c2c16" stroke="#ffd700" stroke-width="1.5"/>
-                        <path d="M100,16 L125,8 L130,40 L100,28 Z" fill="#cc7a00" stroke="#ffd700" stroke-width="2"/>
-                        <circle cx="127" cy="24" r="10" fill="none" stroke="#ffd700" stroke-width="1.5"/>
-                        <path d="M30,22 Q60,40 90,20" fill="none" stroke="#ff4500" stroke-width="1.5"/>
+            <div class="assets-flex-row">
+                <div class="asset-wrapper">
+                    <svg class="dancer-svg dancer-left" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30,15 A5,5 0 1,1 30,5 A5,5 0 1,1 30,15 M30,15 Q20,25 15,35 Q25,32 30,28 Q35,32 45,35 Q40,25 30,15 M30,28 L30,55 L15,85 L30,70 L45,85 L30,55 Z" fill="#ffd700" stroke="#ff8c00" stroke-width="1"/>
                     </svg>
-                    <span class="instrument-label">நாதஸ்வரம்</span>
+                </div>
+
+                <div class="asset-wrapper">
+                    <svg class="instrument-svg nadaswaram-anim" viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10,22 L100,15 L100,29 Z" fill="#5c2c16" stroke="#d4af37" stroke-width="1.5"/>
+                        <path d="M100,15 L130,5 L135,43 L100,29 Z" fill="#cc7a00" stroke="#ffd700" stroke-width="2"/>
+                        <circle cx="12" cy="22" r="3" fill="#ffd700"/>
+                        <line x1="35" y1="20" x2="35" y2="24" stroke="#ffd700" stroke-width="2"/>
+                        <line x1="55" y1="20" x2="55" y2="24" stroke="#ffd700" stroke-width="2"/>
+                        <line x1="75" y1="20" x2="75" y2="24" stroke="#ffd700" stroke-width="2"/>
+                    </svg>
                 </div>
                 
-                <div class="instrument-wrapper">
-                    <svg class="instrument-art thavil-motion" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="15" y="20" width="50" height="40" rx="8" fill="#7a3a16" stroke="#ffd700" stroke-width="2.5"/>
-                        <ellipse cx="15" cy="40" rx="5" ry="19" fill="#fcf8f2" stroke="#ffd700" stroke-width="1.5"/>
-                        <ellipse cx="65" cy="40" rx="5" ry="19" fill="#fcf8f2" stroke="#ffd700" stroke-width="1.5"/>
-                        <line x1="15" y1="28" x2="65" y2="28" stroke="#ffbc42" stroke-width="1.5"/>
-                        <line x1="15" y1="52" x2="65" y2="52" stroke="#ffbc42" stroke-width="1.5"/>
+                <div class="asset-wrapper">
+                    <svg class="instrument-svg thavil-anim" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="12" y="18" width="56" height="44" rx="10" fill="#662200" stroke="#d4af37" stroke-width="2"/>
+                        <ellipse cx="12" cy="40" rx="4" ry="22" fill="#fff8f0" stroke="#d4af37" stroke-width="1.5"/>
+                        <ellipse cx="68" cy="40" rx="4" ry="22" fill="#fff8f0" stroke="#d4af37" stroke-width="1.5"/>
+                        <path d="M16,22 L64,22 M16,58 L64,58 M16,40 L64,40" stroke="#ff9f00" stroke-width="1" stroke-dasharray="3,3"/>
                     </svg>
-                    <span class="instrument-label">தவில்</span>
+                </div>
+
+                <div class="asset-wrapper">
+                    <svg class="dancer-svg dancer-right" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30,15 A5,5 0 1,1 30,5 A5,5 0 1,1 30,15 M30,15 Q20,25 15,35 Q25,32 30,28 Q35,32 45,35 Q40,25 30,15 M30,28 L30,55 L15,85 L30,70 L45,85 L30,55 Z" fill="#ffd700" stroke="#ff8c00" stroke-width="1"/>
+                    </svg>
                 </div>
             </div>
         </section>
 
-        <section class="festival-procession">
-            <svg class="majestic-elephant" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15,95 L22,55 Q28,25 55,25 Q82,25 88,42 Q102,42 108,55 Q115,62 110,78 Q105,80 100,72 Q96,65 88,66 L86,95 L72,95 L76,68 L48,68 L44,95 Z" fill="#3a3b3c" stroke="#1c1c1c" stroke-width="1"/>
-                <path d="M50,32 Q32,32 35,58 Q45,62 55,50 Z" fill="#2e2f30" stroke="#ffd700" stroke-width="1"/>
-                <path d="M78,30 Q86,34 88,48 L70,44 Z" fill="#d4af37"/>
-                <circle cx="78" cy="36" r="2.5" fill="#ff4500"/>
-                <circle cx="84" cy="40" r="2" fill="#fff"/>
-                <circle cx="81" cy="44" r="1.5" fill="#ff4500"/>
-                <path d="M42,38 Q58,34 75,40 L70,68 L44,66 Z" fill="#b80f22" stroke="#ffd700" stroke-width="1.5"/>
-                <path d="M48,42 L68,44 L66,62 L48,60 Z" fill="#d4af37"/>
-                <path d="M92,62 Q105,62 102,56 Q94,54 88,58 Z" fill="#ffffff"/>
-            </svg>
-        </section>
-
-        <section class="luxury-details-board">
-            
-            <div class="event-card-item">
-                <span class="badge-icon">📅</span>
-                <span class="card-heading">தேதி / DATE</span>
-                <span class="card-body-text">05 . 07 . 2026</span>
+        <section class="premium-details-board">
+            <div class="detail-block">
+                <span class="block-label">📅 தேதி / DATE</span>
+                <span class="block-value">05 . 07 . 2026</span>
             </div>
             
-            <div class="event-card-item">
-                <span class="badge-icon">⏱️</span>
-                <span class="card-heading">நேரம் / TIME</span>
-                <span class="card-body-text">9:00 AM to 11:30 AM</span>
+            <div class="detail-block">
+                <span class="block-label">⏱️ நேரம் / TIME</span>
+                <span class="block-value">9:00 AM to 11:30 AM</span>
             </div>
 
-            <div class="event-card-item">
-                <span class="badge-icon">🕌</span>
-                <span class="card-heading">இடம் / VENUE</span>
-                <span class="card-body-text" style="color: #ffd700; font-size: 2rem;">Naatraayan Swamy Temple,</span>
-                <span class="card-body-text" style="display: block; font-size: 1.5rem; margin-top: 5px; opacity: 0.95;">Vellakovil</span>
+            <div class="detail-block">
+                <span class="block-label">🕌 இடம் / VENUE</span>
+                <span class="block-value" style="color: #ffd700; font-size: 2.2rem;">Naatraayan Swamy Temple,</span>
+                <span class="block-value" style="display: block; font-size: 1.6rem; margin-top: 5px; opacity: 0.9;">Vellakovil</span>
             </div>
 
-            <a href="https://maps.app.goo.gl/3N4ybMy85C4drhXE6?g_st=aw" target="_blank" class="grand-navigation-button">
-                <span>📍 VIEW TEMPLE ROUTE MAP</span>
+            <a href="https://maps.app.goo.gl/3N4ybMy85C4drhXE6?g_st=aw" target="_blank" class="map-action-button">
+                <span>📍 VIEW TEMPLE LOCATION ON MAP</span>
             </a>
         </section>
 
-        <div class="celebration-crowd-base"></div>
+        <div class="festival-crowd-footer"></div>
 
     </div>
 
     <script>
-        const particleBox = document.getElementById('ambientParticleBox');
-        // Traditional color palette arrays for flower rain simulation
-        const petalColours = ['#ff8c00', '#ffa500', '#ffd700', '#ff4500', '#ffca3a'];
+        const canvasContainer = document.getElementById('petalCanvas');
+        const petalPalettes = ['#ff8c00', '#ffa500', '#ffd700', '#ff4500', '#ffbe0b'];
         
-        function spawnDynamicPetal() {
-            const leaf = document.createElement('div');
-            leaf.classList.add('flower-petal');
+        function generatePremiumPetal() {
+            const petalElement = document.createElement('div');
+            petalElement.classList.add('flower-petal');
             
-            // Random sizing matrices for deep cinematic depth
-            const diameter = Math.random() * 14 + 8;
-            leaf.style.width = `${diameter}px`;
-            leaf.style.height = `${diameter}px`;
-            leaf.style.left = `${Math.random() * 100}vw`;
-            leaf.style.backgroundColor = petalColours[Math.floor(Math.random() * petalColours.length)];
+            // Random sizing matrices for high cinematic depth of field
+            const dimension = Math.random() * 16 + 10;
+            petalElement.style.width = `${dimension}px`;
+            petalElement.style.height = `${dimension}px`;
+            petalElement.style.left = `${Math.random() * 100}vw`;
+            petalElement.style.backgroundColor = petalPalettes[Math.floor(Math.random() * petalPalettes.length)];
             
-            // Setting random floating velocities
-            const speed = Math.random() * 6 + 5;
-            leaf.style.animationDuration = `${speed}s`;
+            // Setting random floating dynamic movement speed
+            const fallVelocity = Math.random() * 5 + 5;
+            petalElement.style.animationDuration = `${fallVelocity}s`;
+            petalElement.style.transform = `rotate(${Math.random() * 360}deg)`;
             
-            // Adding varied rotation presets
-            leaf.style.transform = `rotate(${Math.random() * 360}deg)`;
+            canvasContainer.appendChild(petalElement);
             
-            particleBox.appendChild(leaf);
-            
-            // Automatic cleanup cycle execution
+            // Garbage collection clean up execution loops
             setTimeout(() => {
-                leaf.remove();
-            }, speed * 1000);
+                petalElement.remove();
+            }, fallVelocity * 1000);
         }
 
         // Loop execution matrix for consistent fluid graphics performance
-        setInterval(spawnDynamicPetal, 200);
+        setInterval(generatePremiumPetal, 180);
     </script>
 </body>
 </html>
