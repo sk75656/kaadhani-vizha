@@ -29,8 +29,8 @@
         /* Video-Style Multi-Layered Cinematic Canvas */
         .invitation-container {
             background: 
-                radial-gradient(circle at 50% 20%, rgba(255, 107, 107, 0.25), transparent 50%),
-                radial-gradient(circle at 50% 70%, rgba(212, 175, 55, 0.15), transparent 60%),
+                radial-gradient(circle at 50% 20%, rgba(255, 107, 107, 0.3), transparent 50%),
+                radial-gradient(circle at 50% 70%, rgba(212, 175, 55, 0.2), transparent 60%),
                 linear-gradient(to bottom, #2b0307 0%, #4a050d 20%, #6e0915 45%, #8a0c1b 70%, #4a050d 90%, #170103 100%);
             position: relative;
             min-height: 100vh;
@@ -86,50 +86,51 @@
         }
 
         section {
-            padding: 60px 20px;
+            padding: 40px 20px;
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        /* Grand Temple Gateway (Inspired by Video Opening) */
+        /* Grand Temple Gateway (Optimized Scale) */
         .temple-gate-wrapper {
-            padding-top: 140px;
+            padding-top: 130px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .temple-gate-svg {
-            width: 320px;
+            width: 100%;
+            max-width: 380px;
             height: auto;
-            filter: drop-shadow(0 0 30px rgba(255, 123, 0, 0.4));
+            filter: drop-shadow(0 0 30px rgba(255, 123, 0, 0.45));
             animation: gatewayGlow 4s ease-in-out infinite alternate;
         }
 
         @keyframes gatewayGlow {
-            0% { filter: drop-shadow(0 0 20px rgba(255, 123, 0, 0.3)); }
-            100% { filter: drop-shadow(0 0 45px rgba(255, 215, 0, 0.7)); }
+            0% { filter: drop-shadow(0 0 20px rgba(255, 123, 0, 0.35)); }
+            100% { filter: drop-shadow(0 0 50px rgba(255, 215, 0, 0.8)); }
         }
 
         /* Grand Invitation Banner */
         .invitation-badge {
             color: #ffd700;
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
             letter-spacing: 4px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.25), transparent);
             padding: 10px 40px;
             display: inline-block;
             margin-bottom: 20px;
-            border-top: 1px solid rgba(255,215,0,0.3);
-            border-bottom: 1px solid rgba(255,215,0,0.3);
+            border-top: 1px solid rgba(255,215,0,0.4);
+            border-bottom: 1px solid rgba(255,215,0,0.4);
         }
 
         .function-title {
             color: #ffffff;
-            font-size: 4.5rem;
+            font-size: clamp(2.8rem, 8vw, 5rem);
             font-weight: bold;
             text-shadow: 0 0 20px #ff5722, 0 0 40px #ff2a00, 0 6px 15px rgba(0,0,0,0.9);
             letter-spacing: 2px;
@@ -142,7 +143,7 @@
         }
 
         .subtitle-eng {
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.6rem);
             color: #ffbc42;
             letter-spacing: 6px;
             font-weight: 600;
@@ -153,18 +154,18 @@
 
         /* Name Card Layout */
         .name-card {
-            background: linear-gradient(135deg, rgba(43, 4, 8, 0.8), rgba(110, 9, 21, 0.4));
+            background: linear-gradient(135deg, rgba(43, 4, 8, 0.85), rgba(110, 9, 21, 0.5));
             border-radius: 25px;
-            padding: 35px 20px;
-            border: 1px solid rgba(255, 215, 0, 0.25);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6), inset 0 0 15px rgba(255,215,0,0.1);
+            padding: 40px 20px;
+            border: 2px solid rgba(255, 215, 0, 0.35);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.7), inset 0 0 20px rgba(255,215,0,0.15);
             margin: 30px auto;
-            max-width: 90%;
-            position: relative;
+            max-width: 600px;
+            width: 90%;
         }
 
         .label-selvi {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 5vw, 2.6rem);
             color: #ffbc42;
             font-weight: bold;
             text-shadow: 0 2px 5px rgba(0,0,0,0.6);
@@ -173,8 +174,8 @@
 
         .child-name {
             color: #ffd700;
-            font-size: 3.8rem;
-            text-shadow: 0 0 15px rgba(255,215,0,0.5), 0 6px 12px rgba(0,0,0,0.7);
+            font-size: clamp(2.5rem, 7vw, 4.2rem);
+            text-shadow: 0 0 20px rgba(255,215,0,0.6), 0 6px 12px rgba(0,0,0,0.7);
             font-weight: bold;
             letter-spacing: 1px;
         }
@@ -182,20 +183,23 @@
         /* High-Detail Musical Canopy & Traditional Dancers */
         .music-dance-section {
             background: rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
-            padding: 30px 20px;
+            border-radius: 25px;
+            padding: 40px 20px;
             border-left: 3px solid #ffd700;
             border-right: 3px solid #ffd700;
-            margin: 40px 15px;
-            position: relative;
+            margin: 40px auto;
+            width: 90%;
+            max-width: 800px;
         }
 
         .section-accent-title {
-            color: #ff9f00;
-            font-size: 1.4rem;
-            letter-spacing: 3px;
+            color: #ffd700;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            letter-spacing: 2px;
             margin-bottom: 30px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            text-shadow: 0 3px 6px rgba(0,0,0,0.6);
+            border-bottom: 1px dashed rgba(255,215,0,0.2);
+            padding-bottom: 15px;
         }
 
         .assets-flex-row {
@@ -203,7 +207,7 @@
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 20px;
         }
 
         .asset-wrapper {
@@ -211,10 +215,12 @@
             flex-direction: column;
             align-items: center;
             position: relative;
+            flex: 1 1 120px;
+            max-width: 160px;
         }
 
         .instrument-svg {
-            width: 140px;
+            width: 100%;
             height: auto;
             filter: drop-shadow(0 10px 15px rgba(0,0,0,0.6));
         }
@@ -238,9 +244,10 @@
             100% { transform: translateY(-6px) scale(1.02); }
         }
 
-        /* Classical Dancer Silhouette Art (Matching Video Theme) */
+        /* Classical Dancer Silhouette Art */
         .dancer-svg {
-            width: 95px;
+            width: 100%;
+            max-width: 85px;
             height: auto;
             filter: drop-shadow(0 5px 10px rgba(255,140,0,0.4));
         }
@@ -269,7 +276,9 @@
             border: 2px solid #ffd700;
             border-radius: 20px;
             padding: 45px 25px;
-            margin: 45px 15px;
+            margin: 45px auto;
+            width: 90%;
+            max-width: 650px;
             box-shadow: 0 25px 55px rgba(0,0,0,0.8), inset 0 0 30px rgba(212,175,55,0.15);
         }
 
@@ -287,12 +296,12 @@
             font-weight: 700;
             display: block;
             margin-bottom: 8px;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
             letter-spacing: 3px;
         }
 
         .block-value {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 4.5vw, 2.2rem);
             color: #ffffff;
             font-weight: bold;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
@@ -302,18 +311,21 @@
         .map-action-button {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             background: linear-gradient(45deg, #d4af37, #ff8c00, #d4af37);
             background-size: 200% auto;
             color: #1a0205;
             font-weight: 800;
-            font-size: 1.3rem;
-            padding: 20px 50px;
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            padding: 18px 40px;
             border-radius: 50px;
             text-decoration: none;
             box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             margin-top: 15px;
             border: 2px solid #ffffff;
+            width: 90%;
+            max-width: 400px;
             animation: shimmerEffect 4s linear infinite, glowPulse 2s infinite;
         }
 
@@ -375,7 +387,7 @@
                 <path d="M68,45 L72,45 L74,53 L66,53 Z" fill="#ffd700"/>
             </svg>
 
-            <div style="margin-top: 30px;">
+            <div style="margin-top: 30px; width: 100%;">
                 <span class="invitation-badge">|| மிக மகிழ்வுடன் அழைக்கும் ||</span>
                 <h1 class="function-title">காதணி விழா</h1>
                 <p class="subtitle-eng">Ear Piercing Ceremony</p>
@@ -390,7 +402,7 @@
         </section>
 
         <section class="music-dance-section">
-            <h3 class="section-accent-title">மங்கள இசை & பரதநாட்டிய முழக்கங்கள்</h3>
+            <h3 class="section-accent-title">மக்கள் அனைவரும் வருக</h3>
             
             <div class="assets-flex-row">
                 <div class="asset-wrapper">
@@ -399,7 +411,7 @@
                     </svg>
                 </div>
 
-                <div class="asset-wrapper">
+                <div class="asset-wrapper" style="max-width: 140px;">
                     <svg class="instrument-svg nadaswaram-anim" viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10,22 L100,15 L100,29 Z" fill="#5c2c16" stroke="#d4af37" stroke-width="1.5"/>
                         <path d="M100,15 L130,5 L135,43 L100,29 Z" fill="#cc7a00" stroke="#ffd700" stroke-width="2"/>
@@ -410,7 +422,7 @@
                     </svg>
                 </div>
                 
-                <div class="asset-wrapper">
+                <div class="asset-wrapper" style="max-width: 90px;">
                     <svg class="instrument-svg thavil-anim" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
                         <rect x="12" y="18" width="56" height="44" rx="10" fill="#662200" stroke="#d4af37" stroke-width="2"/>
                         <ellipse cx="12" cy="40" rx="4" ry="22" fill="#fff8f0" stroke="#d4af37" stroke-width="1.5"/>
@@ -440,12 +452,12 @@
 
             <div class="detail-block">
                 <span class="block-label">🕌 இடம் / VENUE</span>
-                <span class="block-value" style="color: #ffd700; font-size: 2.2rem;">Naatraayan Swamy Temple,</span>
-                <span class="block-value" style="display: block; font-size: 1.6rem; margin-top: 5px; opacity: 0.9;">Vellakovil</span>
+                <span class="block-value" style="color: #ffd700; font-size: clamp(1.6rem, 5vw, 2.4rem);">Naatraayan Swamy Temple,</span>
+                <span class="block-value" style="display: block; font-size: clamp(1.2rem, 3.5vw, 1.6rem); margin-top: 5px; opacity: 0.9;">Vellakovil</span>
             </div>
 
             <a href="https://maps.app.goo.gl/3N4ybMy85C4drhXE6?g_st=aw" target="_blank" class="map-action-button">
-                <span>📍 VIEW TEMPLE LOCATION ON MAP</span>
+                <span>📍 VIEW TEMPLE LOCATION</span>
             </a>
         </section>
 
